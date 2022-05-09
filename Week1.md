@@ -4,7 +4,7 @@ In this week's module, we'll be taking a glance over GitHub basics and how to cl
 ## Day 1 (W1-D1) : Git Fork, Clone and Pull request
 
 ### Fork (W1-D1-01)
-1. Go to the repo's main page [Crash Course: DevOps](https://github.com/valid22/Crash-Course-DevOps), click on **Fork** button to fork the repo to your repository.
+1. Go to the repo's main page [Crash Course: DevOps](https://github.com/bsc-iitm/Crash-Course-DevOps), click on **Fork** button to fork the repo to your repository.
 ![image](https://user-images.githubusercontent.com/10195318/167304903-c6c13f50-ea71-4ac3-b784-0ebd8b07f978.png)
 
 ### Clone (W1-D1-02)
