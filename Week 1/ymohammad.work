@@ -1,1 +1,6 @@
 This is Week1 and Day 1 excercise.
+VSCode setup has done successfully.
+This is an edit from my vscode.
+This commit should create a conflict with my online repository.
+It should not allow me to push without resolving the conflicts.
+This is for Week 1 Day 2 excercise.
