@@ -1,1 +1,6 @@
 Hello Git
+VSCode workspace has been setup successfullly
+This is an edit from VSCode
+This commit should cause conflict with online repo
+This conflict caused should be resolved before pushing
+This conflict resolution is a part Week 1 Day 2 Excercise
