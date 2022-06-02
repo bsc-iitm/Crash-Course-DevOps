@@ -172,3 +172,93 @@ async def test_delete_data():
   }
 ```
 </details>
+
+## Day 3 (W2-D3) - Pydantic
+<details>
+<summary>Click to expand/collapse</summary>
+
+Pydantic provides a model based data structure with data validation and settings management using Python's type hinting/annotations.
+
+### Installation (W2-D3-01)
+
+You can install this in your project by running the following poetry command,
+
+```sh
+poetry add pydantic
+```
+
+### Pydantic models - Base Model (W2-D3-02)
+
+Import any model you want to define from pydantic's `BaseModel`, and you are done
+
+```python
+from pydantic import BaseModel
+
+class User(BaseModel):
+    id: int
+    name: str
+    age: int
+    salary: float
+
+```
+
+you can try creating objects for this model and verify if the data types are enforced
+
+```python
+
+print(User(id=1, name="Dote", age=21, salary=90000))
+print(User(id="1", name="D.e", age=18, salary=8000.90))
+print(User(id="1.0", name="Dote", age=21, salary=90000))
+print(User(id=1, name=1234, age=21, salary=90000))
+print(User(id=1, name="Dote", age=21.9, salary=90000))
+print(User(id=1, name="Dote", age=21, salary="N/A"))
+print(User(id=None, name="Dote", age=21, salary=90000))
+print(User(id=1, name=None, age=21, salary=90000))
+
+```
+
+### Pydantic model conversions (W2-D3-03)
+
+Most used feature of pydantic is it's ability to convert the model to dictionary or json.
+
+
+```
+
+user = User(id=1, name="Dote", age=21, salary=90000)
+
+d = user.dict()
+j = user.json()
+
+print(d, type(d))
+print(j, type(j))
+
+```
+
+
+### Pydantic extended annotation using typing
+You can use Python 3's built in typing library to extend the type annotations
+
+```python
+
+from typing import List, Union, Tuple, Any, Optional
+from pydantic import BaseModel
+
+class User(BaseModel):
+    id: int
+    marks: Tuple[int]
+    courses: List[str]
+    remarks: Optional[Any]
+    secret_key: Union[str, int]
+
+```
+
+try out the same,
+
+```python
+
+print(User(id=1, marks=(1, 2), courses=["cse"], secret_key="101a"))
+print(User(id=1, marks=(1, 2), courses=["cse"], remarks="Good", secret_key=1009))
+
+```
+
+</details>
